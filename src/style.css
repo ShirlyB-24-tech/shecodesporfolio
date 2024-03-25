@@ -2,105 +2,215 @@
   --primary-color: #6c63ff;
   --secondary-color: #f5f2fe;
   --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
 }
 
 body {
   margin-top: 100px;
+  font-family: var(--default-font-family);
 }
 
 h1,
 h2,
-h3 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
 }
 
 h1 {
   font-size: 96px;
-}
-
-h2 {
-  font-size: 48px;
-}
-
-h3 {
-  font-size: 24px;
-  opacity: 0.7;
-}
-
-p {
-  font-size: 18px;
   line-height: 1.5;
 }
 
-.navigation-links {
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
+h2 {
+  font-size: 63px;
 }
 
-.navigation-links a {
-  margin: 20px;
+h3 {
+  font-size: 46px;
 }
 
-.primary-link {
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  color: white;
+p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
 }
 
-.secondary-link {
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-}
-
-.homepage-link {
-  color: var(--primary-color);
+.hero {
+  background: var(--secondary-color);
   text-align: center;
-  display: block;
+  padding: 80px 20px;
 }
 
-.about-paragraphs {
-  margin: 30px 0;
+.hero p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #272142;
 }
 
-.about-paragraphs p {
+.hero h2 {
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 24px;
+}
+
+.btn-branding {
+  background: var(--branding-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+
+.btn-branding-outline {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+.about-section {
+  padding: 160px 20px;
+}
+.about-section h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+.about-section h2 {
+  font-size: 18px;
+  font-family: var(--default-font-family);
+}
+.about-description {
+  margin: 30px;
+}
+.content {
+  margin: 30px;
+}
+.content h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+.content h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: var(--default-font-family);
+}
+.content p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.project-description {
+  padding: 120px 60px;
+}
+.content-container {
+  padding: 60px 20px;
+}
+nav {
+  padding: 20px 0;
+}
+nav li {
+  display: inline;
+  line-height: 42px;
+  list-style-type: none;
+}
+.logo {
+  max-height: 40px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
   margin: 10px;
 }
-
-.email-link {
-  display: flex;
-  justify-content: center;
-  color: var(--primary-color);
-  font-size: 28px;
+nav li a {
+  text-decoration: none;
+  color: #272142;
+  transition: all 100ms ease-in-out;
+}
+nav a:hover,
+nav li.active a {
+  color: var(--branding-color);
+}
+footer {
+  margin: 60px 0;
+}
+footer .contact-box {
+  padding: 30px 120px;
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+footer p {
+  margin: 0;
+}
+footer .email-link {
+  font-size: 24px;
+  color: black;
   text-decoration: none;
 }
-
-.email-link:hover {
-  text-decoration: underline;
+footer .email-link:hover {
+  color: var(--branding-color);
+}
+footer .social-links a {
+  margin: 0 20px;
+  padding: 10px 14px;
+  color: var(--branding-color);
+  font-size: 18px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  transition: all 100ms ease-in-out;
+}
+footer .social-links a:hover {
+  background: var(--branding-color);
+  color: white;
 }
 @media screen and (max-width: 576px) {
   h1 {
-    font-size: 46px;
-    line-height: 1.5;
+    font-size: 44px;
+    line-height: 2;
   }
   h2 {
-    font-size: 32;
+    font-size: 40px;
+  }
+  .project-description {
+    padding: 0;
     text-align: center;
   }
-  p {
+  .about-section {
+    padding: 20px 20px 40px 20px;
     text-align: center;
   }
-  .project-link {
-    display: block;
+  .about-section h1 {
+    font-size: 50px;
+  }
+  .content-container {
+    padding: 0;
+  }
+  .content h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .content h2 {
+    font-size: 20px;
+  }
+  .content {
     text-align: center;
-    margin: 0 20px;
+    padding: 0;
+  }
+  nav a {
+    font-size: 14px;
+  }
+  nav li {
+    margin: 5px;
   }
 }
